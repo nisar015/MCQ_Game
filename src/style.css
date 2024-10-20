@@ -1,0 +1,156 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.question-container, .score-container {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  max-width: 400px;
+  margin: 100px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.options button:hover {
+  background-color: #0056b3;
+}
+
+.score-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.score-container button:hover {
+  background-color: #218838;
+}
+.celebration-container {
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Celebration Message */
+.celebration-message {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.restart-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-top: 20px;
+}
+
+.restart-btn:hover {
+  transform: scale(1.1);
+}
+
+.flowers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://img.icons8.com/emoji/48/000000/hibiscus.png'); /* Flower icon */
+  background-size: contain;
+  animation: fall 4s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50vw, 50vh) scale(1.5) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.flower:nth-child(1) {
+  left: 10%;
+  animation-duration: 5s;
+  animation-delay: 0s;
+}
+
+.flower:nth-child(2) {
+  left: 30%;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+}
+
+.flower:nth-child(3) {
+  left: 60%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.flower:nth-child(4) {
+  left: 80%;
+  animation-duration: 4.5s;
+  animation-delay: 1.5s;
+}
+
+.flower:nth-child(5) {
+  left: 50%;
+  animation-duration: 5.5s;
+  animation-delay: 2s;
+}
